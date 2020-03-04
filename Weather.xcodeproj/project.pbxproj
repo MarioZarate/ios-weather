@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,8 @@
 		AC85C931240F535500AA210F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC85C92F240F535500AA210F /* Main.storyboard */; };
 		AC85C933240F535600AA210F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC85C932240F535600AA210F /* Assets.xcassets */; };
 		AC85C936240F535600AA210F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC85C934240F535600AA210F /* LaunchScreen.storyboard */; };
+		AC85C93E240F5FBC00AA210F /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC85C93D240F5FBC00AA210F /* CurrentWeather.swift */; };
+		AC85C941240F67D100AA210F /* GlobalHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC85C940240F67D100AA210F /* GlobalHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		AC85C932240F535600AA210F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC85C935240F535600AA210F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC85C937240F535600AA210F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC85C93D240F5FBC00AA210F /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
+		AC85C940240F67D100AA210F /* GlobalHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalHelpers.swift; sourceTree = "<group>"; };
 		EE8A830815B103FCB31C6D6B /* Pods-Weather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather.debug.xcconfig"; path = "Target Support Files/Pods-Weather/Pods-Weather.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,8 +74,18 @@
 				AC85C932240F535600AA210F /* Assets.xcassets */,
 				AC85C934240F535600AA210F /* LaunchScreen.storyboard */,
 				AC85C937240F535600AA210F /* Info.plist */,
+				AC85C93F240F5FC900AA210F /* Model */,
+				AC85C940240F67D100AA210F /* GlobalHelpers.swift */,
 			);
 			path = Weather;
+			sourceTree = "<group>";
+		};
+		AC85C93F240F5FC900AA210F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AC85C93D240F5FBC00AA210F /* CurrentWeather.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		BF168C65937448DBDC9A5888 /* Pods */ = {
@@ -80,7 +94,6 @@
 				EE8A830815B103FCB31C6D6B /* Pods-Weather.debug.xcconfig */,
 				7C7B3680E7A0906BEE093D18 /* Pods-Weather.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -209,6 +222,8 @@
 			files = (
 				AC85C92E240F535500AA210F /* ViewController.swift in Sources */,
 				AC85C92A240F535500AA210F /* AppDelegate.swift in Sources */,
+				AC85C941240F67D100AA210F /* GlobalHelpers.swift in Sources */,
+				AC85C93E240F5FBC00AA210F /* CurrentWeather.swift in Sources */,
 				AC85C92C240F535500AA210F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
