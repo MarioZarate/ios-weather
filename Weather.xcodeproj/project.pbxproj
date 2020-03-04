@@ -9,13 +9,16 @@
 /* Begin PBXBuildFile section */
 		03EF1DB371D98B46FE4CE5DD /* Pods_Weather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1229F0FD55F2A9F3A72F3CDD /* Pods_Weather.framework */; };
 		AC85C92A240F535500AA210F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC85C929240F535500AA210F /* AppDelegate.swift */; };
-		AC85C92C240F535500AA210F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC85C92B240F535500AA210F /* SceneDelegate.swift */; };
-		AC85C92E240F535500AA210F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC85C92D240F535500AA210F /* ViewController.swift */; };
 		AC85C931240F535500AA210F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC85C92F240F535500AA210F /* Main.storyboard */; };
 		AC85C933240F535600AA210F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC85C932240F535600AA210F /* Assets.xcassets */; };
 		AC85C936240F535600AA210F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC85C934240F535600AA210F /* LaunchScreen.storyboard */; };
 		AC85C93E240F5FBC00AA210F /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC85C93D240F5FBC00AA210F /* CurrentWeather.swift */; };
 		AC85C941240F67D100AA210F /* GlobalHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC85C940240F67D100AA210F /* GlobalHelpers.swift */; };
+		EBA302752410038C00A82109 /* HourlyForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA302742410038C00A82109 /* HourlyForecast.swift */; };
+		EBA302772410109700A82109 /* WeeklyForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA302762410109700A82109 /* WeeklyForecast.swift */; };
+		EBA3027924103B6200A82109 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA3027824103B6200A82109 /* WeatherViewController.swift */; };
+		EBA3027C241042D900A82109 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA3027A241042D900A82109 /* WeatherView.swift */; };
+		EBA3027D241042D900A82109 /* WeatherView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBA3027B241042D900A82109 /* WeatherView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,14 +26,17 @@
 		7C7B3680E7A0906BEE093D18 /* Pods-Weather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather.release.xcconfig"; path = "Target Support Files/Pods-Weather/Pods-Weather.release.xcconfig"; sourceTree = "<group>"; };
 		AC85C926240F535500AA210F /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC85C929240F535500AA210F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AC85C92B240F535500AA210F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AC85C92D240F535500AA210F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AC85C930240F535500AA210F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC85C932240F535600AA210F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC85C935240F535600AA210F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC85C937240F535600AA210F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC85C93D240F5FBC00AA210F /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 		AC85C940240F67D100AA210F /* GlobalHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalHelpers.swift; sourceTree = "<group>"; };
+		EBA302742410038C00A82109 /* HourlyForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyForecast.swift; sourceTree = "<group>"; };
+		EBA302762410109700A82109 /* WeeklyForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyForecast.swift; sourceTree = "<group>"; };
+		EBA3027824103B6200A82109 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		EBA3027A241042D900A82109 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
+		EBA3027B241042D900A82109 /* WeatherView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherView.xib; sourceTree = "<group>"; };
 		EE8A830815B103FCB31C6D6B /* Pods-Weather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather.debug.xcconfig"; path = "Target Support Files/Pods-Weather/Pods-Weather.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,14 +74,15 @@
 			isa = PBXGroup;
 			children = (
 				AC85C929240F535500AA210F /* AppDelegate.swift */,
-				AC85C92B240F535500AA210F /* SceneDelegate.swift */,
-				AC85C92D240F535500AA210F /* ViewController.swift */,
 				AC85C92F240F535500AA210F /* Main.storyboard */,
 				AC85C932240F535600AA210F /* Assets.xcassets */,
 				AC85C934240F535600AA210F /* LaunchScreen.storyboard */,
 				AC85C937240F535600AA210F /* Info.plist */,
 				AC85C93F240F5FC900AA210F /* Model */,
 				AC85C940240F67D100AA210F /* GlobalHelpers.swift */,
+				EBA3027824103B6200A82109 /* WeatherViewController.swift */,
+				EBA3027A241042D900A82109 /* WeatherView.swift */,
+				EBA3027B241042D900A82109 /* WeatherView.xib */,
 			);
 			path = Weather;
 			sourceTree = "<group>";
@@ -84,6 +91,8 @@
 			isa = PBXGroup;
 			children = (
 				AC85C93D240F5FBC00AA210F /* CurrentWeather.swift */,
+				EBA302742410038C00A82109 /* HourlyForecast.swift */,
+				EBA302762410109700A82109 /* WeeklyForecast.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -168,6 +177,7 @@
 				AC85C936240F535600AA210F /* LaunchScreen.storyboard in Resources */,
 				AC85C933240F535600AA210F /* Assets.xcassets in Resources */,
 				AC85C931240F535500AA210F /* Main.storyboard in Resources */,
+				EBA3027D241042D900A82109 /* WeatherView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,11 +230,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC85C92E240F535500AA210F /* ViewController.swift in Sources */,
+				EBA302772410109700A82109 /* WeeklyForecast.swift in Sources */,
+				EBA3027924103B6200A82109 /* WeatherViewController.swift in Sources */,
 				AC85C92A240F535500AA210F /* AppDelegate.swift in Sources */,
+				EBA302752410038C00A82109 /* HourlyForecast.swift in Sources */,
 				AC85C941240F67D100AA210F /* GlobalHelpers.swift in Sources */,
+				EBA3027C241042D900A82109 /* WeatherView.swift in Sources */,
 				AC85C93E240F5FBC00AA210F /* CurrentWeather.swift in Sources */,
-				AC85C92C240F535500AA210F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +312,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -354,7 +366,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

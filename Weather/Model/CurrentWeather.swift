@@ -118,18 +118,35 @@ class CurrentWeather {
         return _sunset
     }
     
-    func getCurrentWeather() {
+    func getCurrentWeather(completion: @escaping(_ success: Bool)->Void) {
+        
         let LOCATIONAPI_URL = "https://api.weatherbit.io/v2.0/current?city=Raleigh,NC&key=40f7f0d73eba4b1c9e7f69ce211612c2"
         Alamofire.request(LOCATIONAPI_URL).responseJSON { (response) in
             let result = response.result
             if result.isSuccess {
                 let json = JSON(result.value)
                 print(json)
-                self._city = json["data"][0]["city_name"].stringValue
-                self._date = currentDateFromUnix(unixDate: json["data"][0]["ts"].double)
+                let data = json["data"][0]
+                self._city = data["city_name"].stringValue
+                self._date = currentDateFromUnix(unixDate: data["ts"].double)
+                self._weatherType = data["weather"]["description"].stringValue
+                self._currentTemp = data["temp"].double
+                self._feelsLike = data["app_temp"].double
+                self._pressure = data["pres"].double
+                self._humidity = data["rh"].double
+                self._windSpeed = data["wind_spd"].double
+                self._weatherIcon = data["weather"]["icon"].stringValue
+                self._visibility = data["vis"].double
+                self._uv = data["uv"].double
+                self._sunrise = data["sunrise"].stringValue
+                self._sunset = data["sunset"].stringValue
+                
+                completion(true)
             } else {
+                completion(false)
                 print("no result found for current location")
             }
         }
+        
     }
 }
