@@ -52,6 +52,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC2F7A742410B3DE001BFCB5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EBA3027A241042D900A82109 /* WeatherView.swift */,
+				EBA3027B241042D900A82109 /* WeatherView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		AC85C91D240F535500AA210F = {
 			isa = PBXGroup;
 			children = (
@@ -73,16 +82,15 @@
 		AC85C928240F535500AA210F /* Weather */ = {
 			isa = PBXGroup;
 			children = (
-				AC85C929240F535500AA210F /* AppDelegate.swift */,
-				AC85C92F240F535500AA210F /* Main.storyboard */,
-				AC85C932240F535600AA210F /* Assets.xcassets */,
-				AC85C934240F535600AA210F /* LaunchScreen.storyboard */,
 				AC85C937240F535600AA210F /* Info.plist */,
-				AC85C93F240F5FC900AA210F /* Model */,
+				AC85C929240F535500AA210F /* AppDelegate.swift */,
 				AC85C940240F67D100AA210F /* GlobalHelpers.swift */,
 				EBA3027824103B6200A82109 /* WeatherViewController.swift */,
-				EBA3027A241042D900A82109 /* WeatherView.swift */,
-				EBA3027B241042D900A82109 /* WeatherView.xib */,
+				AC85C932240F535600AA210F /* Assets.xcassets */,
+				AC85C934240F535600AA210F /* LaunchScreen.storyboard */,
+				AC85C92F240F535500AA210F /* Main.storyboard */,
+				AC85C93F240F5FC900AA210F /* Model */,
+				AC2F7A742410B3DE001BFCB5 /* Views */,
 			);
 			path = Weather;
 			sourceTree = "<group>";
