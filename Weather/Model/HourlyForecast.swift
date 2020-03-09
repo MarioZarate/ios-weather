@@ -44,8 +44,16 @@ class HourlyForecast {
         self._weatherIcon = json["weather"]["icon"].stringValue
     }
     
-    class func downloadHourlyForecastWeather(completion: @escaping(_ hourlyForecast: [HourlyForecast])->Void) {
-        let HOURLYFORECASTAPI_URL = "https://api.weatherbit.io/v2.0/forecast/hourly?city=Raleigh,NC&hours=24&key=40f7f0d73eba4b1c9e7f69ce211612c2"
+    class func downloadHourlyForecastWeather(location: WeatherLocation, completion: @escaping(_ hourlyForecast: [HourlyForecast])->Void) {
+        
+        var HOURLYFORECASTAPI_URL: String!
+        
+        if !location.isCurrentLocation {
+            HOURLYFORECASTAPI_URL = String(format: "https://api.weatherbit.io/v2.0/forecast/hourly?city=%@,%@&hours=24&key=40f7f0d73eba4b1c9e7f69ce211612c2", location.city, location.countryCode)
+        } else {
+            HOURLYFORECASTAPI_URL = CURRENTLOCATIONHOURLYFORECAST_URL
+        }
+        
         Alamofire.request(HOURLYFORECASTAPI_URL).responseJSON { (response) in
             let result = response.result
             var forecastArray: [HourlyForecast] = []

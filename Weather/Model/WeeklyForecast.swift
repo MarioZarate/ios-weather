@@ -44,8 +44,16 @@ class WeeklyForecast {
         self._weatherIcon = json["weather"]["icon"].stringValue
     }
     
-    class func downloadWeeklyWeatherForecast(completion: @escaping(_ weatherForecast: [WeeklyForecast]) -> Void) {
-        let WEEKLYFORECASTAPI_URL = "https://api.weatherbit.io/v2.0/forecast/daily?city=Raleigh,NC&days=7&key=40f7f0d73eba4b1c9e7f69ce211612c2"
+    class func downloadWeeklyWeatherForecast(location: WeatherLocation, completion: @escaping(_ weatherForecast: [WeeklyForecast]) -> Void) {
+                
+        var WEEKLYFORECASTAPI_URL: String!
+        
+        if !location.isCurrentLocation {
+            WEEKLYFORECASTAPI_URL = String(format: "https://api.weatherbit.io/v2.0/forecast/daily?city=%@,%@&days=7&key=40f7f0d73eba4b1c9e7f69ce211612c2", location.city, location.countryCode)
+        } else {
+            WEEKLYFORECASTAPI_URL = CURRENTLOCATIONWEEKLYFORECAST_URL
+        }
+        
         Alamofire.request(WEEKLYFORECASTAPI_URL).responseJSON { (response) in
             let result = response.result
             var forecastArray: [WeeklyForecast] = []
