@@ -132,7 +132,6 @@ class CurrentWeather {
             let result = response.result
             if result.isSuccess {
                 let json = JSON(result.value)
-                print(json)
                 let data = json["data"][0]
                 self._city = data["city_name"].stringValue
                 self._date = currentDateFromUnix(unixDate: data["ts"].double)
