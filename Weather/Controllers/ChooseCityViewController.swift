@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol ChooseCityViewControllerDelegate {
+    func didAdd(newLocation: WeatherLocation)
+}
+
 class ChooseCityViewController: UIViewController {
 
     // MARK: - IBOutlets
@@ -21,6 +25,8 @@ class ChooseCityViewController: UIViewController {
     let searchController = UISearchController(searchResultsController: nil)
     let userDefaults = UserDefaults.standard
     var savedLocations: [WeatherLocation]?
+    
+    var delegate: ChooseCityViewControllerDelegate?
     
     // MARK: - View lifecycle
     
@@ -163,6 +169,7 @@ extension ChooseCityViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         saveToUserDefaults(location: filteredLocations[indexPath.row])
+        delegate?.didAdd(newLocation: filteredLocations[indexPath.row])
         dismissView()
     }
 }
