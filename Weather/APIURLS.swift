@@ -8,6 +8,8 @@
 
 import Foundation
 
-let CURRENTLOCATION_URL = ""
-let CURRENTLOCATIONWEEKLYFORECAST_URL = ""
-let CURRENTLOCATIONHOURLYFORECAST_URL = ""
+let CURRENTLOCATION_URL = "https://api.weatherbit.io/v2.0/current?lat=\(LocationService.shared.latitude!)&lon=\(LocationService.shared.longitude!)&key=40f7f0d73eba4b1c9e7f69ce211612c2"
+
+let CURRENTLOCATIONWEEKLYFORECAST_URL = "https://api.weatherbit.io/v2.0/forecast/daily?lat=\(LocationService.shared.latitude!)&lon=\(LocationService.shared.longitude!)&days=7&key=40f7f0d73eba4b1c9e7f69ce211612c2"
+
+let CURRENTLOCATIONHOURLYFORECAST_URL = "https://api.weatherbit.io/v2.0/forecast/hourly?lat=\(LocationService.shared.latitude!)&lon=\(LocationService.shared.longitude!)&hours=24&key=40f7f0d73eba4b1c9e7f69ce211612c2"

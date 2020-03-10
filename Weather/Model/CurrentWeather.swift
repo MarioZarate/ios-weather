@@ -136,8 +136,8 @@ class CurrentWeather {
                 self._city = data["city_name"].stringValue
                 self._date = currentDateFromUnix(unixDate: data["ts"].double)
                 self._weatherType = data["weather"]["description"].stringValue
-                self._currentTemp = data["temp"].double
-                self._feelsLike = data["app_temp"].double
+                self._currentTemp = getTempBasedOnSettings(celsius: data["temp"].double ?? 0.0)
+                self._feelsLike = getTempBasedOnSettings(celsius: data["app_temp"].double ?? 0.0)
                 self._pressure = data["pres"].double
                 self._humidity = data["rh"].double
                 self._windSpeed = data["wind_spd"].double
@@ -149,6 +149,7 @@ class CurrentWeather {
                 
                 completion(true)
             } else {
+                self._city = location.city
                 completion(false)
                 print("no result found for current location")
             }
